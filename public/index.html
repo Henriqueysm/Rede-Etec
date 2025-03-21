@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login e Cadastro</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<script src="js/login.js" defer></script>
+<script src="js/criar-conta.js" defer></script>
+<script src="js/pop-up-token.js" defer></script>
+<script src="js/toogle-form.js" defer></script>
+<script src="js/toogle-password.js" defer></script>
+
+
+    <div class="container" id="container">
+        <div class="panel left-panel">
+            <img src="images/logo.png" alt="Etec Logo" class="logo login-logo">
+            <img src="images/logo pb.png" alt="Etec Logo Alternativo" class="logo signup-logo">
+            <p>Entre e conecte-se com a galera da ETEC, expanda seu network e compartilhe suas experiências!</p>
+        </div>
+        <div class="panel right-panel">
+            <div class="form-container login active">
+                
+                <form class="form" method="POST" action="/register">
+                    <p class="title">Faça login na Rede Etec</p>
+<br><br>
+                    <label>
+                        <input class="input" type="email" id="loginEmail" required>
+                        <span>Email</span>
+                    </label>
+
+
+                    <label class="password-label">
+                        <input class="input password-input" type="password" id="loginPassword" required>
+                        <span>Senha</span>
+                        <span class="toggle-password">
+                            <img src="images/eye-closed.png" alt="Mostrar senha">
+                        </span>
+                    </label>
+                    <!-- Link "Esqueci minha senha" -->
+                    <p class="forgot-password"><a href="#" onclick="openPopup()">Esqueci minha senha</a></p>
+                    
+
+                    <button type="submit" class="btn-avancar" id="loginBtn">Avançar</button><br>                
+                <p class="btn-criar">Não tem conta? <span class="criar" onclick="toggleForm()"><a href="#register">Criar conta</a> </span></p>
+            </form>
+        </div>
+
+        <div class="form-container signup" id="register">
+            <form class="form">
+                <p class="title1">Inicie uma conta</p>
+                <br>
+                        
+            <div class="flex">
+                        <label>
+                            <input class="input" type="text" id="firstName" placeholder="" required="">
+                            <span>Nome</span>
+                        </label>
+                
+                        <label>
+                            <input class="input" type="text" id="lastName" placeholder="" required>
+                            <span>Sobrenome</span>
+                        </label>
+                    </div>  
+                            
+                    <label>
+                        <input class="input" type="email" id="registerEmail" placeholder="" required>
+                        <span>Email</span>
+                    </label> 
+
+                   
+                    <label class="password-label">
+                        <input class="input password-input" type="password" id="registerPassword" placeholder="" required>
+                        <span>Senha</span>
+                        <span class="toggle-password">
+                            <img src="images/eye-closed.png" alt="Mostrar senha">
+                        </span>
+                    </label>
+                    
+                    <label>
+                        <input class="input" type="date" id="birthDate" placeholder="" required>
+                        <span>Data de Nascimento</span>
+                    </label>
+
+                    <button type="submit" class="btn-avancar" id="registerBtn">Criar Conta</button><br>
+                    <p class="btn-entrar">Já tem uma conta ? <span class="entrar" onclick="toggleForm()"><a href="#">Entrar</a> </span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pop-up de Recuperação de Senha -->
+<div class="popup-container" id="popup">
+    <div class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        
+        <!-- Passo 1: Digitar e-mail -->
+        <div id="step-email">
+            <h2>Recuperação de Senha</h2>
+            <p>Digite seu e-mail para receber um código de recuperação.</p>
+            <input type="email" id="emailInput" placeholder="Digite seu e-mail">
+            <button onclick="sendEmail()">Enviar Código</button>
+        </div>
+
+        <!-- Passo 2: Digitar Código -->
+        <div id="step-token" style="display: none;">
+            <h2>Digite o Código</h2>
+            <p>Enviamos um código para seu e-mail. Digite abaixo:</p>
+            <input type="text" id="tokenInput" placeholder="Digite o código">
+            <button onclick="verifyToken()">Verificar</button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+ 
+</body>
+</html>

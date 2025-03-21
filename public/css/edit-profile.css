@@ -1,0 +1,176 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ddd;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    background-color: #b30000;
+    padding: 10px 40px;
+    color: white;
+}
+
+header a:hover{
+    color: rgb(229, 128, 128);
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-etec{
+    width: 80px;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.user-email {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.logout {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+  /* Estilo do conteúdo da página */
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e1e1e1;
+  }
+  
+  /* Estilo para a área de upload de foto */
+  .custum-file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border: 2px dashed #005d8f; /* Cor que combina com o cabeçalho */
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 80px;
+    fill: #005d8f;
+  }
+  
+  .custum-file-upload .text span {
+    color: #005d8f;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+  
+  /* Estilo para o formulário */
+  .form-horizontal {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #005d8f; /* Cor principal da Etec */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #003f61; /* Cor mais escura no hover */
+  }
+  
+  /* Adicionando responsividade */
+  @media (max-width: 768px) {
+    .container {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .custum-file-upload {
+      width: 80%;
+    }
+  
+    .form-group .form-control {
+      font-size: 14px;
+    }
+  
+    button[type="submit"] {
+      font-size: 14px;
+    }
+  }
+  

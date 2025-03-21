@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Social Etec</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo etec.png" alt="Logo Etec" class="logo-etec">
+        </div>
+        <nav>
+            <a href="home.html">Perfil</a>
+            <a href="#">Feed</a>
+            <a href="#">Amigos</a>
+            <a href="#">Comunidades</a>
+        </nav>
+        <input type="text" placeholder="pesquisa">
+        <p class="user-email"></p> <!-- Aqui exibe o e-mail do usuário logado -->
+        <button class="logout">Sair</button>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <div class="profile">
+                <!-- Foto e nome do usuário será carregado aqui -->
+                <img id="profile-photo" src="images/user.png" alt="Foto do usuário">
+                <h3 id="user-name">Nome do Usuário</h3>
+                <p id="user-age">Idade: 0</p>
+            </div>
+            <br>
+            <ul>
+                <li>
+                    <button onclick="window.location.href='edit-profile.html'">Editar Informações</button>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="feed">
+            <div class="post-box">
+                <textarea placeholder="Compartilhe suas novidades..."></textarea>
+                <button id="postButton">Publicar</button>
+            </div>
+            <div class="posts"></div> <!-- Aqui as postagens serão exibidas -->
+        </section>
+
+        <aside class="rightbar">
+            <h4>Amigos</h4>
+            <div class="friends-list">
+                <!-- Lista de amigos -->
+            </div>
+            <h4>Comunidades</h4>
+            <div class="communities-list">
+                <!-- Lista de comunidades -->
+            </div>
+        </aside>
+    </main>
+
+
+  <script>
+    window.onload = function () {
+      const user = JSON.parse(localStorage.getItem('user'));
+
+      if (!user) {
+        alert('Usuário não autenticado.');
+        window.location.href = 'index.html';  // Redireciona para a página de login
+        return;
+      }
+
+      // Exibe o nome do usuário na página
+      const userNameElement = document.getElementById('user-name');
+      if (userNameElement) {
+        userNameElement.textContent = `${user.firstName} ${user.lastName}`;  // Exibe nome e sobrenome
+      }
+    };
+  </script>
+
+    <script src="js/home.js"></script> <!-- Incluindo o script -->
+</body>
+</html>

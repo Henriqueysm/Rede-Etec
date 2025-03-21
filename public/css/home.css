@@ -1,0 +1,156 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ddd;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    background-color: #b30000;
+    padding: 10px 40px;
+    color: white;
+}
+
+header a:hover{
+    color: rgb(229, 128, 128);
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-etec{
+    width: 80px;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.user-email {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.logout {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile img {
+    width: 100px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.feed {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.post-box textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.post {
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.rightbar {
+    width: 20%;
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#profile-photo{
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+
+/* Modal */
+.modal {
+    display: none; /* Ocultar o modal por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+    z-index: 1000; /* Garante que o modal apareça acima de outros conteúdos */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Botão Fechar */
+#closeModalBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Modal aberto */
+.modal.show {
+    display: flex;
+}

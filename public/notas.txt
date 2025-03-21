@@ -1,0 +1,14 @@
+erros?
+
+1°: quando vou criar minha conta, aparece que "já criei a conta" e que "erro:email já cadastrado"
+
+2°: toda vez que atualizado algo no html a minha conta some e eu tenho que fazer novamente um cadastro
+
+3° quando entro no home.html, a foto de perfil não aparece(nem com login novo e nem com login já feito antes)
+
+4°: quando clico editar informações aparece um erro: "erro ao carregar dados do perfil"
+
+5°: quando eu clico para abrir a escolha da imagem, nada acontece.
+
+6° nem a senha e nem o nome do usuario é salvo e alterado quando eu clico em "salvar alterações"
+
